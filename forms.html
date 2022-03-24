@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/responses.docx">
+            <label for="name">Enter your name</label>                                           /* text */
+            <input type="text" id="name" name="name" required minlength="3">
+
+            <hr>
+            
+            <label for="favorite">Enter your favorite food</label>                              /* text */
+            <input type="text" id="favorite" name="favorite" required>
+            
+            <hr>
+            
+            <label for="spicy">Select the level of spicyness(0 to 10)</label>                   /* range */
+            <input type="range" step="1" id="spicy" name="spicy" required min="0" max="10">
+            
+            <hr>
+
+            <p>Would you like to have it everyday?</p>                                           /* radio */
+            <input type="radio" id="everydayy" name="everyday" required value="yes">
+            <label for="everyday">Yes</label>
+            
+            <input type="radio" id="everydayn" name="everyday" required value="no">
+            <label for="everydayn">No</label>
+            
+            <hr>
+
+            <label for="count">How many times would you like to have it in a week</label>         /* number */
+            <input type="number" id="count" name="count" required>
+            
+            <hr>
+            
+            <label for="carbrand">Select your favorite car</label>                                /* dropdown list */
+            <select id="carbrand" name="carbrand" required>
+                <option value="toyota">Toyota</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Audi">Audi</option>
+                <option value="tata">Tata</option>
+            </select>
+            
+            <hr>
+            
+            <label for="have">Which car brand do you have?</label>                                  /* data list */
+            <select id="have" name="have" multiple>
+                <option value="toyota">Toyota</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Audi">Audi</option>
+                <option value="tata">Tata</option>
+            </select>
+            
+            <hr>
+            <th>Tick the advantages of having a car</th><br>                                       /* checkbox */
+            <label for="adv1">Very safe</label>
+            <input type="checkbox" id="adv1" name="adv1"><br>
+            <label for="adv2">More speed </label>
+            <input type="checkbox" id="adv2" name="adv2"><br>
+            <label for="adv3">Can accomodate less number of people</label>
+            <input type="checkbox" id="adv3" name="adv3">
+            
+            <hr>
+
+            <input type="button" onclick="alert('Hi!')" value="Message">                             /* button */
+            
+            <hr>
+            
+            <label for="fcolor">Select your favorite color</label>                                 /* color */
+            <input type="color" id="fcolor" name="fcolor">
+
+            <hr>
+            
+            <input type="reset">                                                                  /* reset button */
+            
+            <hr>
+            
+            <label for="bdate">Enter your birth date</label>                                       /* date */
+            <input type="date" id="bdate" name="bdate">
+
+            <hr>
+
+            <label for="dtl">Enter date time local</label>                                         /* datetime-local */
+            <input type="datetime-local" id="dtl" name="dtl">
+
+            <hr>
+
+            <label for="mail">Enter yourr email</label>                                           /* email */
+            <input type="email" id="mail" name="mail">
+
+            <hr>
+
+            <label for="mfile">Attach a file here</label>                                          /* file */
+            <input type="file" id="mfile" name="mfile" required>
+            <hr>
+
+            <label for="bmonth">Enter the month of birth</label>                                    /* month */
+            <input type="month" id="bmonth" name="bmonth">
+            
+            <hr>
+
+            <label for="suggestion">Type your suggestions(if any)</label>                            /* text area */
+            <input type="textarea" rows="5" cols="40" id="suggestion" name="suggestion">
+             
+            <hr>
+            
+            <label for="recommendation">Do you want to recommend any site?</label>                  /* url */
+            <input type="url" id="recommendation" name="recommendation">
+
+            <hr>
+
+            <label for="weeek">Enter your lucky week</label>                                      /* week */
+            <input type="week" id="week" name="week">
+
+            <hr>
+
+            <label for="phone">Phone number :</label>                                         /* tel */
+            <input type="tel" id="phone" name="phone">
+
+            <hr>
+
+            <input type="submit" value="Finish">                                                     /* submit button */
+        </form>
+    </body>
+</html>
