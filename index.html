@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            h1{
+                color:chartreuse;
+                text-align: center;
+            }
+
+            header{
+                background-color: red;
+            }
+
+            label{
+                font-size: 20px;
+            }
+
+            div{
+                background-color: rgb(217, 253, 10);
+            }
+
+            footer{
+                background-color: coral;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="irclogo.png" alt="IRC Logo" style="height: 200px; width: 200px; float: left;">
+            <img src="LOGO.jpg" alt="Institute logo" style="height:200px; width: 200px; float: right;">
+            <h1>International Relations Cell, IIT Kharagpur</h1>
+            <br><br><br><br><br><br><br><br>
+        </header>
+        <div>
+            <h3 style="text-align: center; font-size: 40px;">Fill the form below.(* is required)</h3>
+            <br><br><br>
+
+            <form>
+                <button type="button" onclick="alert('Welcome to Intenational Relations Cell, IIT Kharagpur')">Message</button>
+
+                <br><br>
+
+
+                <label for="name"><b>Enter your name* :</b></label>                <!--name-->
+                <input type="text" id="name" name="name" required>
+                
+                <br><br>
+                
+                <label for="mail"><b>Enter your mail id* :</b></label>            <!--email-->
+                <input type="email" id="mail" name="mail" required>
+
+                <br><br>
+
+                <label for="age"><b>Enter your age* :</b></label>                 <!--age-->
+                <input type="number" id="age" name="age" required>
+
+                <br><br>
+
+                <label for="progam"><b>Select the program* :</b></label>          <!--select program-->
+                <select required>
+                    <option value="ftp">Future Research Talent Program</option>
+                    <option value="foreign">Foreign Training Program</option>
+                    <option value="sap">Semester Away Program(SAP)</option>
+                    <option value="sep">Student Exchange Program</option>
+                    <option value="jdp">Joint Doctoral Program</option>
+                    <option value="sgrip">Shri Gopal Rajgarhia International Program</option>
+                    <option value="douifp">DUO-India Fellowship Programme</option>
+                </select>
+
+                <br><br>
+
+                <p style="font-size: 20px;"><b>Select your gender* :</b></p>
+                <input type="radio" id="gend1" name="gend" value="female">   <!--gender-->
+                <label for="gend1"><b>Female</b></label><br>
+                <input type="radio" id="gend2" name="gend" value="male">
+                <label for="gend2"><b>Male</b></label><br>
+                <input type="radio" id="gend3" name="gend" value="other">
+                <label for="gend3"><b>Others</b></label>
+
+                <br><br>
+
+                <label for="achieve"><b>Attach achievements</b>(if any)</label>    <!--file-->
+                <input type="file" id="achieve" name="achieve">
+                
+                <br><br>
+
+                <label for="reason"><b>Why do you want to register for the program</b></label> <!--textarea-->
+                <input type="textarea" rows="5" cols="50" id="reason" name="reason">
+
+                <br><br>
+
+                <label for="bod"><b>Date of Birth* </b></label>                      <!--date of birth-->
+                <input type="date" id="dob" name="dob" required>
+
+                <br><br>
+
+                <label for="num"><b>Enter your phone number* :</b></label>                <!--phone number-->
+                <input type="tel" id="num" name="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                <br><br>
+
+                <label for="place"><b>Where are you from* :</b></label>
+                <input type="text" list="countries" id="place" name="place">
+                <datalist id="place">
+                    <option value="India"></option>
+                    <option value="The United States of America(USA)"></option>
+                    <option value="Germany"></option>
+                    <option value="United Kingdoms(UK)"></option>
+                    <option value="Canada"></option>
+                    <option value="France"></option>
+                    <option value="Japan"></option>
+                    <option value="Australia"></option>
+                    <option value="London"></option>
+                    <option value="Switzerland"></option>
+                </datalist>
+                
+                <br><br>
+
+                <label for="pw"><b>Create a password* :</b></label>                 <!--password-->
+                <input type="password" id="pw" name="pw" required>
+
+                <br><br>
+
+                <p style="font-size: 20px;"><b>Select the program which you have attended earlier</b></p>  <!--drop down list--> 
+                <input type="checkbox" id="p1" name="p1">
+                <label for="p1"><b>Future Research Talent Program</b></label><br>
+                <input type="checkbox" id="p2" name="p2">
+                <label for="p2"><b>Semester Away Program(SAP)</b></label><br>
+                <input type="checkbox" id="p3" name="p3">
+                <label fo="p3"><b>Foreign Training Program</b></label><br>
+                <input type="checkbox" id="p4" name="p4">
+                <label fo="p4"><b>Student Exchange Program</b></label><br>
+                <input type="checkbox" id="p5" name="p5">
+                <label fo="p5"><b>Joint Doctoral Program</b></label><br>
+                <input type="checkbox" id="p6" name="p6">
+                <label fo="p6"><b>Shri Gopal Rajgarhia International Program</b></label><br>
+                <input type="checkbox" id="p7" name="p7">
+                <label fo="p7"><b>DUO-India Fellowship Programme</b></label><br>
+
+                <p style="font-size: 20px"><b>Rate your experience on a scale of 0-10:</b></p>  <!--rating-->
+                <label for="budget">0 </label>
+                <input type="range" step="1" max="10" min="0" id="budget" name="budget">
+                <label for="budget"> 10</label>
+
+                <br><br>
+
+                <label for="advise"><b>Any reccomendations:</b></label>
+                <input type="textarea" id="advise" name="advise" rows="6" cols="30">
+                <br><br>
+                
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <footer>
+            <p style="color: blue; font-size: 25px;"><b>Visit IIT Kharagpur's website <a href="http://www.iitkgp.ac.in/" target="_blank">here</a></b></p>
+            <p style="color: blue; font-size: 25px;"><b>Visit Intenational Relations Cell, IIT Kharagpur's website <a href="https://international.iitkgp.ac.in/" target="_blank">here</a> </b></p> 
+        </footer>
+
+    </body>
+</html>
