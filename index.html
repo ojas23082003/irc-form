@@ -24,6 +24,12 @@
                 background-color: coral;
             }
 
+            @media (max-width:450px){
+                #photokgp{
+                    display: none;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -36,7 +42,7 @@
         <div>
             <h3 style="text-align: center; font-size: 40px;">Fill the form below.(* is required)</h3>
             <br><br><br>
-            <img src="iitkgp.jpg" style="float:right;">
+            <img src="iitkgp.jpg" id="photokgp" style="float:right;">
             <form>
                 <button type="button" onclick="alert('Welcome to Intenational Relations Cell, IIT Kharagpur')">Message</button>
 
