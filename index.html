@@ -14,6 +14,11 @@
 
             label{
                 font-size: 20px;
+                text-align: center;
+            }
+
+            .inputs{
+                text-align: center;
             }
 
             div{
@@ -33,7 +38,26 @@
                 margin-left: 10px;
                 color: white;
                 padding: 10px;
+                border-radius: 10px 0px 0px 10px;
 
+            }
+
+            #top{
+                background-color: red;
+            }
+
+            #about{
+                background-color: blue;
+            }
+
+            #box2{
+                width: 500px;
+                height: 400px;
+                background-color: blueviolet;
+                border-radius: 10px 0px 0px 10px;
+                clear: both;
+                float: left;
+                overflow: auto;
             }
 
             @media (max-width:450px){
@@ -45,37 +69,46 @@
         </style>
     </head>
     <body>
-        <header>
+        <div>
+            <div id="top">
             <img src="irclogo.png" alt="IRC Logo" style="height: 200px; width: 200px; float: left;">
             <img src="LOGO.jpg" alt="Institute logo" style="height:200px; width: 200px; float: right;">
             <h1>International Relations Cell, IIT Kharagpur</h1>
             <br><br><br><br><br><br><br><br>
-        </header>
-        <div>
+            </div>
+        
             <h3 style="text-align: center; font-size: 40px;">Fill the form below.(* is required)</h3>
             <br><br><br>
-            <img src="iitkgp.jpg" id="photokgp" style="float:right;">
             <form>
+
+                <div class="inputs">
                 <button type="button" onclick="alert('Welcome to Intenational Relations Cell, IIT Kharagpur')">Message</button>
+                </div>
 
                 <br><br>
 
-
+                <div class="inputs">
                 <label for="name"><b>Enter your name* :</b></label>                <!--name-->
                 <input type="text" id="name" name="name" required>
+                </div>
                 
                 <br><br>
                 
+                <div class="inputs">
                 <label for="mail"><b>Enter your mail id* :</b></label>            <!--email-->
                 <input type="email" id="mail" name="mail" required>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="age"><b>Enter your age* :</b></label>                 <!--age-->
                 <input type="number" id="age" name="age" required>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="progam"><b>Select the program* :</b></label>          <!--select program-->
                 <select required>
                     <option value="ftp">Future Research Talent Program</option>
@@ -86,39 +119,51 @@
                     <option value="sgrip">Shri Gopal Rajgarhia International Program</option>
                     <option value="douifp">DUO-India Fellowship Programme</option>
                 </select>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <p style="font-size: 20px;"><b>Select your gender* :</b></p>
                 <input type="radio" id="gend1" name="gend" value="female">   <!--gender-->
-                <label for="gend1"><b>Female</b></label><br>
+                <label for="gend1"><b>Female</b></label>
                 <input type="radio" id="gend2" name="gend" value="male">
-                <label for="gend2"><b>Male</b></label><br>
+                <label for="gend2"><b>Male</b></label>
                 <input type="radio" id="gend3" name="gend" value="other">
                 <label for="gend3"><b>Others</b></label>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="achieve"><b>Attach achievements</b>(if any)</label>    <!--file-->
                 <input type="file" id="achieve" name="achieve">
-                
-                <br><br>
+                </div>
 
+                <br><br>
+                
+                <div class="inputs">
                 <label for="reason"><b>Why do you want to register for the program</b></label> <!--textarea-->
                 <input type="textarea" rows="5" cols="50" id="reason" name="reason">
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="bod"><b>Date of Birth* </b></label>                      <!--date of birth-->
                 <input type="date" id="dob" name="dob" required>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="num"><b>Enter your phone number* :</b></label>                <!--phone number-->
                 <input type="tel" id="num" name="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <label for="place"><b>Where are you from* :</b></label>
                 <input list="place">
                 <datalist id="place">
@@ -133,14 +178,17 @@
                     <option value="London"></option>
                     <option value="Switzerland"></option>
                 </datalist>
+                </div>
                 
                 <br><br>
-
+                <div class="inputs">
                 <label for="pw"><b>Create a password* :</b></label>                 <!--password-->
                 <input type="password" id="pw" name="pw" required>
+                </div>
 
                 <br><br>
-
+                
+                <div class="inputs">
                 <p style="font-size: 20px;"><b>Select the program which you have attended earlier</b></p>  <!--drop down list--> 
                 <input type="checkbox" id="p1" name="p1">
                 <label for="p1"><b>Future Research Talent Program</b></label><br>
@@ -156,64 +204,87 @@
                 <label fo="p6"><b>Shri Gopal Rajgarhia International Program</b></label><br>
                 <input type="checkbox" id="p7" name="p7">
                 <label fo="p7"><b>DUO-India Fellowship Programme</b></label><br>
-
+                </div>
+                
+                <div class="inputs">
                 <p style="font-size: 20px"><b>Rate your experience on a scale of 0-10:</b></p>  <!--rating-->
                 <label for="budget">0 </label>
                 <input type="range" step="1" max="10" min="0" id="budget" name="budget">
                 <label for="budget"> 10</label>
+                </div>
 
-                <br><br>
-
-                <label for="advise"><b>Any reccomendations:</b></label>
-                <input type="textarea" id="advise" name="advise" rows="6" cols="30">
                 <br><br>
                 
+                <div class="inputs">
+                <label for="advise"><b>Any reccomendations:</b></label>
+                <input type="textarea" id="advise" name="advise" rows="6" cols="30">
+                </div>
+
+                <br><br>
+                
+                <div class="inputs">
                 <input type="reset" value="Reset">
                 <input type="submit" value="Submit">
+                </div>
             </form>
-        </div>
-        <div>
-            <h1 style="text-align: center;color: black;"><u>About IIT Kharapur</u></h1>
-            <img src="iitkgp.jpg" style="float: left;width: 950px;height: 400px;border: 4px solid black;box-shadow: -6px 6px 0px 1px rgb(255, 21, 4);">
-            <div id="box">
-                <p style="text-align: center;font-size: 40px;"><u><b><i>Dedicated to the service of the Nation</i></b></u></p><br>
-                <ul>
-                    <li style="font-size: 20px;"><b>Motto</b></li>
-                </ul><br>
-               
-                <p>The motto of IIT Kharagpur is "Yogah Karmasu Kaushalam". This literally translates to "Excellence in action is Yoga", essentially implying that doing your work well is (true) yoga. This can be traced to Sri Krishna's discourse with Arjuna in the Bhagavad Gita. The quote, in the larger context of the Gita, urges man to acquire equanimity because a mind of equanimity allows a man to shed distracting thoughts of the effects of his deeds and concentrate on the task before him. Equanimity is the source of perfection in Karmic endeavours that leads to Salvation.
-                </p>
 
-                <ul>
-                    <li style="font-size: 20px;"><b>Mission</b></li>
-                </ul><br>
+            <div id="about">
+                <h1 style="text-align: center;color: black;"><u>About IIT Kharapur</u></h1>
+                <img src="iitkgp.jpg" style="float: left;width: 950px;height: 400px;border: 4px solid black;border-radius: 10px;box-shadow: -6px 6px 0px 1px rgb(255, 21, 4);">
+                <div id="box">
+                    <p style="text-align: center;font-size: 40px;"><u><b><i>Dedicated to the service of the Nation</i></b></u></p><br>
+                    <ul>
+                        <li style="font-size: 20px;"><b>Motto</b></li>
+                    </ul><br>
+                
+                    <p>The motto of IIT Kharagpur is "Yogah Karmasu Kaushalam". This literally translates to "Excellence in action is Yoga", essentially implying that doing your work well is (true) yoga. This can be traced to Sri Krishna's discourse with Arjuna in the Bhagavad Gita. The quote, in the larger context of the Gita, urges man to acquire equanimity because a mind of equanimity allows a man to shed distracting thoughts of the effects of his deeds and concentrate on the task before him. Equanimity is the source of perfection in Karmic endeavours that leads to Salvation.
+                    </p>
 
-                <p>The Institute aligns all its activities to serve national interest and seeks</p><br>
-                <ul>
-                    <li>To provide broad-based education, helping students hone their professional skills and acquire the best-in-class capabilities in their respective disciplines</li>
-                    <li>To draw the best expertise in science, technology, management and law so as to equip students with the skills to visualize, synthesize and execute projects in these fields</li>
-                    <li>To imbibe a spirit of entrepreneurship and innovation in its students</li>
-                    <li>To undertake sponsored research and provide consultancy services in industrial, educational and socially relevant areas</li>
-                </ul><br>
+                    <ul>
+                        <li style="font-size: 20px;"><b>Mission</b></li>
+                    </ul><br>
 
-                <ul>
-                    <li style="font-size: 20px;"><b>Vision</b></li>
-                </ul><br>
-                <ul>
-                    <li>To be a centre of excellence in education and research, producing global leaders in science, technology and management</li>
-                    <li>To be a hub of knowledge creation that prioritises the frontier areas of national and global importance</li>
-                    <li>To improve the life of every citizen of the country</li>
-                </ul>
+                    <p>The Institute aligns all its activities to serve national interest and seeks</p><br>
+                    <ul>
+                        <li>To provide broad-based education, helping students hone their professional skills and acquire the best-in-class capabilities in their respective disciplines</li>
+                        <li>To draw the best expertise in science, technology, management and law so as to equip students with the skills to visualize, synthesize and execute projects in these fields</li>
+                        <li>To imbibe a spirit of entrepreneurship and innovation in its students</li>
+                        <li>To undertake sponsored research and provide consultancy services in industrial, educational and socially relevant areas</li>
+                    </ul><br>
+
+                    <ul>
+                        <li style="font-size: 20px;"><b>Vision</b></li>
+                    </ul><br>
+                    <ul>
+                        <li>To be a centre of excellence in education and research, producing global leaders in science, technology and management</li>
+                        <li>To be a hub of knowledge creation that prioritises the frontier areas of national and global importance</li>
+                        <li>To improve the life of every citizen of the country</li>
+                    </ul>
 
 
+                </div>
+            </div>
+            
+            <div>
+                <div id="box2">
+                    <h1 style="text-align: center;"><b><u>About us</u></b></h1><br>
+                    <p>
+                        The Office of International Relations (OIR) works to promote the exchange of students, faculty and ideas between IIT Kharagpur and her international partners. The Office has a dedicated team of Executives working on all aspects of international engagement and is jointly headed by the Dean and Associate Dean of International Relations. Administrative support is also provided by the Institutional Development Office. The International Relations Cell (IRC) is a student body working under the OIR. Together OIR and IRC work towards increasing IIT Kharagpur's global outreach.
+
+                    </p><br><br>
+                    <p>IIT Kharagpur, as an Institute of Eminence, has realized that producing industry competitive and academically strong graduates alone cannot be it’s ultimate objective. It needs to craft students who possess leadership qualities and will eventually become entities who will change the world. For this to happen, it is necessary that the students showcase themselves on world platforms and in-turn gain the much-cherished exposure towards new work-cultures by living and working abroad. Foreign Training Program provides a unique opportunity to undergraduate students from IIT Kharagpur to conduct research under the supervision of professors of eminent universities abroad. Through this program we have started formalization of the foreign training application procedure and we aim to streamline and increase the efficiency of the foreign training application procedure in IIT Kharagpur. FTP serves to provide students with cross-cultural exposure and opportunities to expand their horizons through research extensive summers.</p>
+
+                </div>
+                <img src="irclogo.png" style="width:400px; height: 400px;float:right;background-color: white;" >
+            </div>
+        
+         <br><br><br><br><br><br><br>
+   
+            <div style="clear: both; background-color: brown;">
+                <p style="color: blue; font-size: 25px;"><b>Visit IIT Kharagpur's website <a href="http://www.iitkgp.ac.in/" target="_blank">here</a></b></p>
+                <p style="color: blue; font-size: 25px;"><b>Visit Intenational Relations Cell, IIT Kharagpur's website <a href="https://international.iitkgp.ac.in/" target="_blank">here</a> </b></p> 
             </div>
         </div>
-        <br><br><br><br><br><br><br>
-   
-        <footer style="clear: both;">
-            <p style="color: blue; font-size: 25px;"><b>Visit IIT Kharagpur's website <a href="http://www.iitkgp.ac.in/" target="_blank">here</a></b></p>
-            <p style="color: blue; font-size: 25px;"><b>Visit Intenational Relations Cell, IIT Kharagpur's website <a href="https://international.iitkgp.ac.in/" target="_blank">here</a> </b></p> 
-        </footer>
 
     </body>
 </html>
