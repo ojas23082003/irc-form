@@ -1,301 +1,369 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Registration</title>
-        <style>
-            h1{
-                color:chartreuse;
-                text-align: center;
+
+<head>
+    <title>Registration</title>
+    <style>
+        h1 {
+            color: chartreuse;
+            text-align: center;
+        }
+
+        header {
+            background-color: red;
+        }
+
+        label {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #dabba {
+            background-color: yellow;
+            border: 2px solid black;
+            margin-left: 150px;
+            margin-right: 150px;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        footer {
+            background-color: coral;
+        }
+
+        #box {
+            background-color: blueviolet;
+            overflow: auto;
+            height: 400px;
+            width: 500px;
+            float: left;
+            margin-left: 50px;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 0px 0px 10px;
+            border: 2px solid black;
+        }
+
+        .first {
+            float: left;
+            width: 50%;
+        }
+
+        .second {
+            float: left;
+        }
+
+        #top {
+            background-color: red;
+        }
+
+        #about {
+            background-color: blue;
+        }
+
+        #logo {
+            border: 4px solid black;
+            border-radius: 10px;
+            box-shadow: 6px 6px 0px 1px rgb(255, 21, 4);
+            float: left;
+        }
+
+        #box2 {
+            width: 500px;
+            height: 400px;
+            background-color: blueviolet;
+            border-radius: 10px 0px 0px 10px;
+            float: left;
+            overflow: auto;
+            color: white;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        #submission {
+            text-align: center;
+        }
+
+        @media (max-width:450px) {
+            .first {
+                width: 100%;
             }
-
-            header{
-                background-color: red;
+            img{
+                width: 100%;
             }
+        }
+    </style>
+</head>
 
-            label{
-                font-size: 20px;
-                text-align: center;
-            }
-
-            .inputs{
-                margin-left: 550px;
-            }
-
-            div{
-                background-color: rgb(217, 253, 10);
-            }
-
-            footer{
-                background-color: coral;
-            }
-
-            #box{
-                background-color: blueviolet;
-                overflow: auto;
-                height: 400px;
-                width: 500px;
-                float: left;
-                margin-left: 50px;
-                color: white;
-                padding: 10px;
-                border-radius: 10px 0px 0px 10px;
-
-            }
-
-            #top{
-                background-color: red;
-            }
-
-            #about{
-                background-color: blue;
-            }
-
-            #logo{
-                border: 4px solid black;
-                border-radius: 10px;
-                box-shadow: 6px 6px 0px 1px rgb(255, 21, 4);
-                float: left;
-            }
-
-            #box2{
-                width: 500px;
-                height: 400px;
-                background-color: blueviolet;
-                border-radius: 10px 0px 0px 10px;
-                clear: both;
-                float: left;
-                overflow: auto;
-                color: white;
-                margin-left: 250px;
-                margin-right: 50px;
-                padding: 10px;
-            }
-
-            @media (max-width:450px){
-                #photokgp{
-                    display: none;
-                }
-            }
-
-        </style>
-    </head>
-    <body>
-        <div>
-            <div id="top">
+<body>
+    <div>
+        <div id="top">
             <img src="irclogo.png" alt="IRC Logo" style="height: 200px; width: 200px; float: left;">
             <img src="LOGO.jpg" alt="Institute logo" style="height:200px; width: 200px; float: right;">
             <h1>International Relations Cell, IIT Kharagpur</h1>
             <br><br><br><br><br><br><br><br>
-            </div>
-        
-            <h3 style="text-align: center; font-size: 40px;">Fill the form below.(* is required)</h3>
-            <br><br><br>
-            <form>
-
-                <div class="inputs">
-                <button type="button" onclick="alert('Welcome to Intenational Relations Cell, IIT Kharagpur')">Message</button>
-                </div>
-
-                <br><br>
-
-                <div class="inputs">
-                <label for="name"><b>Enter your name* :</b></label>                <!--name-->
-                <input type="text" id="name" name="name" required>
-                </div>
-                
-                <br><br>
-                
-                <div class="inputs">
-                <label for="mail"><b>Enter your mail id* :</b></label>            <!--email-->
-                <input type="email" id="mail" name="mail" required>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="age"><b>Enter your age* :</b></label>                 <!--age-->
-                <input type="number" id="age" name="age" required>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="progam"><b>Select the program* :</b></label>          <!--select program-->
-                <select required>
-                    <option value="ftp">Future Research Talent Program</option>
-                    <option value="foreign">Foreign Training Program</option>
-                    <option value="sap">Semester Away Program(SAP)</option>
-                    <option value="sep">Student Exchange Program</option>
-                    <option value="jdp">Joint Doctoral Program</option>
-                    <option value="sgrip">Shri Gopal Rajgarhia International Program</option>
-                    <option value="douifp">DUO-India Fellowship Programme</option>
-                </select>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <p style="font-size: 20px;"><b>Select your gender* :</b></p>
-                <input type="radio" id="gend1" name="gend" value="female">   <!--gender-->
-                <label for="gend1"><b>Female</b></label>
-                <input type="radio" id="gend2" name="gend" value="male">
-                <label for="gend2"><b>Male</b></label>
-                <input type="radio" id="gend3" name="gend" value="other">
-                <label for="gend3"><b>Others</b></label>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="achieve"><b>Attach achievements</b>(if any)</label>    <!--file-->
-                <input type="file" id="achieve" name="achieve">
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="reason"><b>Why do you want to register for the program</b></label> <!--textarea-->
-                <input type="textarea" rows="5" cols="50" id="reason" name="reason">
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="bod"><b>Date of Birth* </b></label>                      <!--date of birth-->
-                <input type="date" id="dob" name="dob" required>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="num"><b>Enter your phone number* :</b></label>                <!--phone number-->
-                <input type="tel" id="num" name="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="place"><b>Where are you from* :</b></label>
-                <input list="place">
-                <datalist id="place">
-                    <option value="India"></option>
-                    <option value="The United States of America(USA)"></option>
-                    <option value="Germany"></option>
-                    <option value="United Kingdoms(UK)"></option>
-                    <option value="Canada"></option>
-                    <option value="France"></option>
-                    <option value="Japan"></option>
-                    <option value="Australia"></option>
-                    <option value="London"></option>
-                    <option value="Switzerland"></option>
-                </datalist>
-                </div>
-                
-                <br><br>
-                <div class="inputs">
-                <label for="pw"><b>Create a password* :</b></label>                 <!--password-->
-                <input type="password" id="pw" name="pw" required>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <p style="font-size: 20px;"><b>Select the program which you have attended earlier</b></p>  <!--drop down list--> 
-                <input type="checkbox" id="p1" name="p1">
-                <label for="p1"><b>Future Research Talent Program</b></label><br>
-                <input type="checkbox" id="p2" name="p2">
-                <label for="p2"><b>Semester Away Program(SAP)</b></label><br>
-                <input type="checkbox" id="p3" name="p3">
-                <label fo="p3"><b>Foreign Training Program</b></label><br>
-                <input type="checkbox" id="p4" name="p4">
-                <label fo="p4"><b>Student Exchange Program</b></label><br>
-                <input type="checkbox" id="p5" name="p5">
-                <label fo="p5"><b>Joint Doctoral Program</b></label><br>
-                <input type="checkbox" id="p6" name="p6">
-                <label fo="p6"><b>Shri Gopal Rajgarhia International Program</b></label><br>
-                <input type="checkbox" id="p7" name="p7">
-                <label fo="p7"><b>DUO-India Fellowship Programme</b></label><br>
-                </div>
-                
-                <div class="inputs">
-                <p style="font-size: 20px"><b>Rate your experience on a scale of 0-10:</b></p>  <!--rating-->
-                <label for="budget">0 </label>
-                <input type="range" step="1" max="10" min="0" id="budget" name="budget">
-                <label for="budget"> 10</label>
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <label for="advise"><b>Any reccomendations:</b></label>
-                <input type="textarea" id="advise" name="advise" rows="6" cols="30">
-                </div>
-
-                <br><br>
-                
-                <div class="inputs">
-                <input type="reset" value="Reset">
-                <input type="submit" value="Submit">
-                </div>
-            </form>
-
-            <div id="about">
-                <h1 style="text-align: center;color: black;"><u>About IIT Kharapur</u></h1>
-                <img src="iitkgp.jpg" style="float: left;width: 710px;height: 400px;margin-left:50px;border: 4px solid black;border-radius: 10px;box-shadow: -6px 6px 0px 1px rgb(255, 21, 4);">
-                <div id="box">
-                    <p style="text-align: center;font-size: 40px;"><u><b><i>Dedicated to the service of the Nation</i></b></u></p><br>
-                    <ul>
-                        <li style="font-size: 20px;"><b>Motto</b></li>
-                    </ul><br>
-                
-                    <p>The motto of IIT Kharagpur is "Yogah Karmasu Kaushalam". This literally translates to "Excellence in action is Yoga", essentially implying that doing your work well is (true) yoga. This can be traced to Sri Krishna's discourse with Arjuna in the Bhagavad Gita. The quote, in the larger context of the Gita, urges man to acquire equanimity because a mind of equanimity allows a man to shed distracting thoughts of the effects of his deeds and concentrate on the task before him. Equanimity is the source of perfection in Karmic endeavours that leads to Salvation.
-                    </p>
-
-                    <ul>
-                        <li style="font-size: 20px;"><b>Mission</b></li>
-                    </ul><br>
-
-                    <p>The Institute aligns all its activities to serve national interest and seeks</p><br>
-                    <ul>
-                        <li>To provide broad-based education, helping students hone their professional skills and acquire the best-in-class capabilities in their respective disciplines</li>
-                        <li>To draw the best expertise in science, technology, management and law so as to equip students with the skills to visualize, synthesize and execute projects in these fields</li>
-                        <li>To imbibe a spirit of entrepreneurship and innovation in its students</li>
-                        <li>To undertake sponsored research and provide consultancy services in industrial, educational and socially relevant areas</li>
-                    </ul><br>
-
-                    <ul>
-                        <li style="font-size: 20px;"><b>Vision</b></li>
-                    </ul><br>
-                    <ul>
-                        <li>To be a centre of excellence in education and research, producing global leaders in science, technology and management</li>
-                        <li>To be a hub of knowledge creation that prioritises the frontier areas of national and global importance</li>
-                        <li>To improve the life of every citizen of the country</li>
-                    </ul>
-
-
-                </div>
-            </div><br><br><br><br><br>
-            
-            <div>
-                <div id="box2">
-                    <h1 style="text-align: center;color: white;"><b><u><i>About us</i></u></b></h1><br>
-                    <p>
-                        The Office of International Relations (OIR) works to promote the exchange of students, faculty and ideas between IIT Kharagpur and her international partners. The Office has a dedicated team of Executives working on all aspects of international engagement and is jointly headed by the Dean and Associate Dean of International Relations. Administrative support is also provided by the Institutional Development Office. The International Relations Cell (IRC) is a student body working under the OIR. Together OIR and IRC work towards increasing IIT Kharagpur's global outreach.
-
-                    </p><br><br>
-                    <p>IIT Kharagpur, as an Institute of Eminence, has realized that producing industry competitive and academically strong graduates alone cannot be it’s ultimate objective. It needs to craft students who possess leadership qualities and will eventually become entities who will change the world. For this to happen, it is necessary that the students showcase themselves on world platforms and in-turn gain the much-cherished exposure towards new work-cultures by living and working abroad. Foreign Training Program provides a unique opportunity to undergraduate students from IIT Kharagpur to conduct research under the supervision of professors of eminent universities abroad. Through this program we have started formalization of the foreign training application procedure and we aim to streamline and increase the efficiency of the foreign training application procedure in IIT Kharagpur. FTP serves to provide students with cross-cultural exposure and opportunities to expand their horizons through research extensive summers.</p>
-
-                </div>
-                <img id="logo" src="irclogo.png" style="width:400px; height: 400px;background-color: white;" >
-            </div>
-        
-         <br><br><br><br><br><br><br>
-   
-            <div style="clear: both; background-color: brown;">
-                <p style="color: yellowgreen; font-size: 25px;"><b>Visit IIT Kharagpur's website <a href="http://www.iitkgp.ac.in/" target="_blank">here</a></b></p>
-                <p style="color: yellowgreen; font-size: 25px;"><b>Visit Intenational Relations Cell, IIT Kharagpur's website <a href="https://international.iitkgp.ac.in/" target="_blank">here</a> </b></p> 
-            </div>
         </div>
 
-    </body>
+        <h3 style="text-align: center; font-size: 40px;">Fill the form below.(* is required)</h3>
+        <br><br><br>
+        <form>
+            <div id="dabba">
+
+                <div>
+                    <button type="button"
+                        onclick="alert('Welcome to Intenational Relations Cell, IIT Kharagpur')">Message</button>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <label for="name"><b>Enter your name* :</b></label><br>
+                        <!--name-->
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="second">
+                        <label for="mail"><b>Enter your mail id* :</b></label><br>
+                        <!--email-->
+                        <input type="email" id="mail" name="mail" required>
+                    </div><br><br><br>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <label for="age"><b>Enter your age* :</b></label><br>
+                        <!--age-->
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="second">
+                        <label for="progam"><b>Select the program* :</b></label><br>
+                        <!--select program-->
+                        <select required>
+                            <option value="ftp">Future Research Talent Program</option>
+                            <option value="foreign">Foreign Training Program</option>
+                            <option value="sap">Semester Away Program(SAP)</option>
+                            <option value="sep">Student Exchange Program</option>
+                            <option value="jdp">Joint Doctoral Program</option>
+                            <option value="sgrip">Shri Gopal Rajgarhia International Program</option>
+                            <option value="douifp">DUO-India Fellowship Programme</option>
+                        </select>
+                    </div><br><br><br>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <label for="achieve"><b>Attach achievements</b>(if any)</label><br>
+                        <!--file-->
+                        <input type="file" id="achieve" name="achieve">
+                    </div>
+                    <div class="second">
+                        <label for="reason"><b>Why do you want to register for the program</b></label><br>
+                        <!--textarea-->
+                        <input type="textarea" rows="5" cols="50" id="reason" name="reason">
+                    </div><br><br><br>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <label for="bod"><b>Date of Birth* </b></label><br>
+                        <!--date of birth-->
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="second">
+                        <label for="num"><b>Enter your phone number* :</b></label><br>
+                        <!--phone number-->
+                        <input type="tel" id="num" name="num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div><br><br><br>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <label for="place"><b>Where are you from* :</b></label><br>
+                        <input list="place">
+                        <datalist id="place">
+                            <option value="India"></option>
+                            <option value="The United States of America(USA)"></option>
+                            <option value="Germany"></option>
+                            <option value="United Kingdoms(UK)"></option>
+                            <option value="Canada"></option>
+                            <option value="France"></option>
+                            <option value="Japan"></option>
+                            <option value="Australia"></option>
+                            <option value="London"></option>
+                            <option value="Switzerland"></option>
+                        </datalist>
+                    </div>
+                    <div class="second">
+                        <label for="pw"><b>Create a password* :</b></label><br>
+                        <!--password-->
+                        <input type="password" id="pw" name="pw" required>
+                    </div><br><br><br>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <p style="font-size: 20px;"><b>Select your gender* :</b></p>
+                    <input type="radio" id="gend1" name="gend" value="female">
+                    <!--gender-->
+                    <label for="gend1"><b>Female</b></label>
+                    <input type="radio" id="gend2" name="gend" value="male">
+                    <label for="gend2"><b>Male</b></label>
+                    <input type="radio" id="gend3" name="gend" value="other">
+                    <label for="gend3"><b>Others</b></label>
+                    <hr>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <div class="first">
+                        <p style="font-size: 20px;"><b>Select the program which you have attended earlier</b></p>
+                        <!--drop down list-->
+                        <input type="checkbox" id="p1" name="p1">
+                        <label for="p1"><b>Future Research Talent Program</b></label><br>
+                        <input type="checkbox" id="p2" name="p2">
+                        <label for="p2"><b>Semester Away Program(SAP)</b></label><br>
+                        <input type="checkbox" id="p3" name="p3">
+                        <label fo="p3"><b>Foreign Training Program</b></label><br>
+                        <input type="checkbox" id="p4" name="p4">
+                        <label fo="p4"><b>Student Exchange Program</b></label><br>
+                        <input type="checkbox" id="p5" name="p5">
+                        <label fo="p5"><b>Joint Doctoral Program</b></label><br>
+                        <input type="checkbox" id="p6" name="p6">
+                        <label fo="p6"><b>Shri Gopal Rajgarhia International Program</b></label><br>
+                        <input type="checkbox" id="p7" name="p7">
+                        <label fo="p7"><b>DUO-India Fellowship Programme</b></label><br>
+                    </div>
+
+                    <div class="second">
+                        <p style="font-size: 20px"><b>Rate your experience on a scale of 0-10:</b></p>
+                        <!--rating-->
+                        <label for="budget">0 </label>
+                        <input type="range" step="1" max="10" min="0" id="budget" name="budget">
+                        <label for="budget"> 10</label>
+                    </div>
+                </div><br><br><br><br><br><br><br><br><br><br><br><br>
+                <hr><br>
+
+                <div>
+                    <label for="advise"><b>Any reccomendations:</b></label>
+                    <input type="textarea" id="advise" name="advise" rows="6" cols="30">
+                </div><br>
+                <hr>
+
+                <br><br>
+
+                <div id="submission">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+
+        <div id="about">
+            <h1 style="text-align: center;color: black;"><u>About IIT Kharapur</u></h1>
+            <img src="iitkgp.jpg"
+                style="float: left;width: 710px;height: 400px;margin-left:50px;border: 4px solid black;border-radius: 10px;box-shadow: -6px 6px 0px 1px rgb(255, 21, 4);">
+            <div id="box">
+                <p style="text-align: center;font-size: 40px;"><u><b><i>Dedicated to the service of the
+                                Nation</i></b></u></p><br>
+                <ul>
+                    <li style="font-size: 20px;"><b>Motto</b></li>
+                </ul><br>
+
+                <p>The motto of IIT Kharagpur is "Yogah Karmasu Kaushalam". This literally translates to "Excellence in
+                    action is Yoga", essentially implying that doing your work well is (true) yoga. This can be traced
+                    to Sri Krishna's discourse with Arjuna in the Bhagavad Gita. The quote, in the larger context of the
+                    Gita, urges man to acquire equanimity because a mind of equanimity allows a man to shed distracting
+                    thoughts of the effects of his deeds and concentrate on the task before him. Equanimity is the
+                    source of perfection in Karmic endeavours that leads to Salvation.
+                </p>
+
+                <ul>
+                    <li style="font-size: 20px;"><b>Mission</b></li>
+                </ul><br>
+
+                <p>The Institute aligns all its activities to serve national interest and seeks</p><br>
+                <ul>
+                    <li>To provide broad-based education, helping students hone their professional skills and acquire
+                        the best-in-class capabilities in their respective disciplines</li>
+                    <li>To draw the best expertise in science, technology, management and law so as to equip students
+                        with the skills to visualize, synthesize and execute projects in these fields</li>
+                    <li>To imbibe a spirit of entrepreneurship and innovation in its students</li>
+                    <li>To undertake sponsored research and provide consultancy services in industrial, educational and
+                        socially relevant areas</li>
+                </ul><br>
+
+                <ul>
+                    <li style="font-size: 20px;"><b>Vision</b></li>
+                </ul><br>
+                <ul>
+                    <li>To be a centre of excellence in education and research, producing global leaders in science,
+                        technology and management</li>
+                    <li>To be a hub of knowledge creation that prioritises the frontier areas of national and global
+                        importance</li>
+                    <li>To improve the life of every citizen of the country</li>
+                </ul>
+
+
+            </div>
+        </div>
+        <br><br><br><br><br>
+
+        <div>
+            <img id="logo" src="irclogo.png" style="width: 710px;margin-left:50px;margin-right:50px; height: 400px;background-color: white;">
+            <div id="box2">
+                <h1 style="text-align: center;color: white;"><b><u><i>About us</i></u></b></h1><br>
+                <p>
+                    The Office of International Relations (OIR) works to promote the exchange of students, faculty and
+                    ideas between IIT Kharagpur and her international partners. The Office has a dedicated team of
+                    Executives working on all aspects of international engagement and is jointly headed by the Dean and
+                    Associate Dean of International Relations. Administrative support is also provided by the
+                    Institutional Development Office. The International Relations Cell (IRC) is a student body working
+                    under the OIR. Together OIR and IRC work towards increasing IIT Kharagpur's global outreach.
+
+                </p><br><br>
+                <p>IIT Kharagpur, as an Institute of Eminence, has realized that producing industry competitive and
+                    academically strong graduates alone cannot be it’s ultimate objective. It needs to craft students
+                    who possess leadership qualities and will eventually become entities who will change the world. For
+                    this to happen, it is necessary that the students showcase themselves on world platforms and in-turn
+                    gain the much-cherished exposure towards new work-cultures by living and working abroad. Foreign
+                    Training Program provides a unique opportunity to undergraduate students from IIT Kharagpur to
+                    conduct research under the supervision of professors of eminent universities abroad. Through this
+                    program we have started formalization of the foreign training application procedure and we aim to
+                    streamline and increase the efficiency of the foreign training application procedure in IIT
+                    Kharagpur. FTP serves to provide students with cross-cultural exposure and opportunities to expand
+                    their horizons through research extensive summers.</p>
+
+            </div>
+
+        </div>
+
+        <br><br><br><br><br><br><br>
+
+        <div style="clear: both; background-color: brown;">
+            <p style="color: yellowgreen; font-size: 25px;"><b>Visit IIT Kharagpur's website <a
+                        href="http://www.iitkgp.ac.in/" target="_blank">here</a></b></p>
+            <p style="color: yellowgreen; font-size: 25px;"><b>Visit Intenational Relations Cell, IIT Kharagpur's
+                    website <a href="https://international.iitkgp.ac.in/" target="_blank">here</a> </b></p>
+        </div>
+    </div>
+
+</body>
+
 </html>
